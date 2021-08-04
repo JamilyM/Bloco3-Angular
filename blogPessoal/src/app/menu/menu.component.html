@@ -10,7 +10,7 @@
           </li>
 
           <li class="nav-item d-flex align-items-center px-2">
-            <p class="fs-5 m-0 fw-bold text-white">Olá, {{usuario}} </p>
+            <p class="fs-5 m-0 fw-bold text-white">Olá, {{nome}} </p>
             <a class="text-light" href="">
               <p class="fs-5 m-0 text-white px-2">
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
@@ -22,8 +22,8 @@
 
         <ul class="m-0 d-flex align-items-center menu3">
           <li>
-            <a (click)= "sair()" href="" class="fs-5 fw-bold" 
-            class="fa fa-sign-out fs-5 me-3" aria-hidden="true">Sair</a>
+            <a href="" class="fs-5 fw-bold" 
+            class="fa fa-sign-out fs-5 me-3" aria-hidden="true" (click)= "sair()">Sair</a>
           </li>
         </ul> 
 
