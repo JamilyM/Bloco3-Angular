@@ -1,27 +1,27 @@
 #img-bg{
-    background-image: url("https://i.imgur.com/d5bMdDJ.jpg");
+  background-image: url("https://i.imgur.com/d5bMdDJ.jpg");
 
-    min-height: 750px;
+  min-height: 750px;
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .menu3 button {
-    display: block;
- }
- 
+  display: block;
+}
+
 .menu3 button {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 15px;
- }
- 
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+}
+
 .menu3 button:hover {
-    color: rgb(12, 11, 11);
- }
+  color: rgb(12, 11, 11);
+}
 
 .link{
-    text-decoration: none;
- }
+  text-decoration: none;
+}

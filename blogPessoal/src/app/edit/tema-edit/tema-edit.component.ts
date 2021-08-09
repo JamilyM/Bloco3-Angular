@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Tema } from 'src/app/model/tema';
+import { Tema } from 'src/app/model/Tema';
 import { TemaService } from 'src/app/service/tema.service';
 import { environment } from 'src/environments/environment.prod';
 
@@ -12,18 +12,20 @@ import { environment } from 'src/environments/environment.prod';
 export class TemaEditComponent implements OnInit {
 
   tema: Tema = new Tema()
+
   constructor(
     private temaService: TemaService,
     private router: Router,
-    private active: ActivatedRoute
+    private route: ActivatedRoute
   ) { }
 
-  ngOnInit(){
+  ngOnInit() {
     if(environment.token == ''){
+      //alert('Sua sessão expirou. Faça login novamente.')
       this.router.navigate(['/entrar'])
     }
 
-    let id = this.active.snapshot.params['id']
+    let id = this.route.snapshot.params['id']
     this.findByIdTema(id)
   }
 
@@ -31,13 +33,13 @@ export class TemaEditComponent implements OnInit {
     this.temaService.getByIdTema(id).subscribe((resp: Tema)=>{
       this.tema = resp
     })
-    
+
   }
 
   atualizar(){
-    this.temaService.putTema(this.tema).subscribe((resp: Tema)=> {
-      this.tema= resp
-      alert("Tema atualizado com sucesso")
+    this.temaService.putTema(this.tema).subscribe((resp: Tema)=>{
+      this.tema = resp
+      alert('Tema atualizado com sucesso')
       this.router.navigate(['/tema'])
     })
   }
